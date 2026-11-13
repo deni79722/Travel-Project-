@@ -3,6 +3,9 @@ import { useSearchParams } from 'react-router-dom';
 import type { Destination } from '../../models/Destination';
 import { getDestinations } from '../../services/destinationService';
 import './DestinationsPage.css';
+import { Link } from 'react-router-dom';
+
+
 function DestinationsPage() {
     const [searchParams] = useSearchParams();
     const [destinations, setDestinations] = useState<Destination[]>([]);
@@ -75,10 +78,12 @@ function DestinationsPage() {
                     <>
                         <div className="destination-grid">
                             {filteredDestinations.map((destination) => (
-                                <article
-                                    className="destination-card"
-                                    key={destination.id}
-                                >
+                                <Link
+                                to={`/destinations/${destination.id}`}
+                                className="destination-card-link"
+                                key={destination.id}
+                            >
+                                <article className="destination-card">
                                     <img
                                         src={destination.imageUrl}
                                         alt={destination.name}
@@ -88,6 +93,7 @@ function DestinationsPage() {
                                         <p>{destination.country}</p>
                                     </div>
                                 </article>
+                            </Link>
                             ))}
                         </div>
                         {filteredDestinations.length === 0 && (

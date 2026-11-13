@@ -1,0 +1,89 @@
+.destination-details-page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 30px;
+}
+
+.back-destinations-button {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.back-destinations-button:hover {
+    background: #f5f5f5;
+}
+
+.destination-details-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.07);
+}
+
+.destination-details-image {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    display: block;
+}
+
+.destination-details-info {
+    padding: 35px;
+}
+
+.destination-details-info h1 {
+    font-size: 38px;
+    margin: 10px 0;
+    color: #222;
+}
+
+.destination-details-country {
+    color: #777;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.destination-details-description {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.plan-trip-button {
+    background: #2864dc;
+    color: white;
+    border: none;
+    padding: 13px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background 0.2s ease;
+}
+
+.plan-trip-button:hover {
+    background: #1d50b5;
+}
+
+@media (max-width: 700px) {
+    .destination-details-page {
+        padding: 25px 15px;
+    }
+
+    .destination-details-image {
+        height: 260px;
+    }
+
+    .destination-details-info {
+        padding: 22px;
+    }
+
+    .destination-details-info h1 {
+        font-size: 29px;
+    }
+}

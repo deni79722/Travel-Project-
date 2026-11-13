@@ -10,17 +10,7 @@ import type { Destination } from '../models/Destination';
 
 const DESTINATIONS_COLLECTION = 'destinations';
 
-// Retrieve all destinations
-// export async function getDestinations(): Promise<Destination[]> {
-//     const destinationsRef = collection(db, DESTINATIONS_COLLECTION);
-//     const snapshot = await getDocs(destinationsRef);
 
-//     return snapshot.docs.map((document) => ({
-//         id: document.id,
-//         ...document.data()
-//     })) as Destination[];
-// }
-//###########
 export async function getDestinations(): Promise<Destination[]> {
     console.log('Starting Firestore query...');
 
@@ -35,7 +25,7 @@ export async function getDestinations(): Promise<Destination[]> {
         ...document.data()
     })) as Destination[];
 }
-//#############
+
 // Retrieve one destination by ID
 export async function getDestinationById(
     destinationId: string

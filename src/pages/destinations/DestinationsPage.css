@@ -80,3 +80,14 @@
         grid-template-columns: 1fr;
     }
 }
+
+.destination-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.destination-card-link:hover {
+    transform: translateY(-4px);
+    transition: transform 0.2s ease;
+}
